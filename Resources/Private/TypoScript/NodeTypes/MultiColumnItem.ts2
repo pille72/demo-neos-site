@@ -1,0 +1,8 @@
+prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+	attributes.class = TYPO3.TypoScript:RawArray {
+		class1 = 'col-xs-12'
+		class2 = ${' col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+		class3 = ${' col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+		class4 = ${' col-lg-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
+	}
+}

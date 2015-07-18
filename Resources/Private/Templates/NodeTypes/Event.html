@@ -1,0 +1,5 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+Date: <f:format.date date="{startDate}" format="d.m.Y" /> - <f:format.date date="{endDate}" format="d.m.Y" />
+Title: {neos:contentElement.editable(property: 'title')}
+Teaser: {neos:contentElement.editable(property: 'teaser')}

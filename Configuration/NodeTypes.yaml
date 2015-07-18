@@ -1,0 +1,43 @@
+'T3DD.Basic:EventList':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'general'
+    label: 'Event-List'
+
+# Event NodeType
+'T3DD.Basic:Event':
+  superTypes: ['TYPO3.Neos:Content']
+  ui:
+    group: 'general'
+    label: 'Event'
+    inspector:
+      groups:
+        event:
+          label: 'Event'
+  properties:
+    title:
+      type: string
+      defaultValue: 'Title here'
+      ui:
+        label: 'Title'
+        inlineEditable: TRUE
+    teaser:
+      type: string
+      defaultValue: 'Teaser here'
+      ui:
+        label: 'Teaser'
+        inlineEditable: TRUE
+    startDate:
+      type: date
+      ui:
+        label: 'End-Datum'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'event'
+    endDate:
+      type: date
+      ui:
+        label: 'End-Datum'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'event'

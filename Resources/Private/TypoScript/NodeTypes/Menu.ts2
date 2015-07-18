@@ -1,0 +1,16 @@
+prototype(T3DD.Basic.MenuItem) < prototype(TYPO3.TypoScript:Tag) {
+	tagName = 'div'
+	attributes.id = ${node.identifier}
+	attributes.class = ${q(node).property('title')}
+
+	content = TYPO3.Neos:ContentCollection {
+		attributes.class = 'container'
+		nodePath = 'main'
+	}
+}
+
+prototype(T3DD.Basic.Menu) < prototype(TYPO3.TypoScript:Collection) {
+	collection = ${q(site).children('[instanceof TYPO3.Neos:Document]')}
+	itemName = 'node'
+	itemRenderer = T3DD.Basic.MenuItem
+}

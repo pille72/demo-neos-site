@@ -1,0 +1,12 @@
+include: Content/Page.ts2
+include: NodeTypes/MultiColumn.ts2
+include: NodeTypes/MultiColumnItem.ts2
+
+prototype(T3DD.Basic:Event) < prototype(TYPO3.Neos:Content) {
+    test = 'TEST'
+}
+
+prototype(T3DD.Basic:EventList) <  prototype(TYPO3.Neos:Content) {
+    test = 'Event-Liste'
+    events = ${q(site).find('[instanceof T3DD.Basic:Event]')}
+}

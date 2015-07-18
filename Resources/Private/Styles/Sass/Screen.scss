@@ -1,0 +1,109 @@
+@import "bootstrap/stylesheets/bootstrap";
+
+$nav-link-color: #FFFFFF;
+$footer-bg-color: #000000;
+$footer-color: #FFFFFF;
+$footer-link-color: #FFFFFF;
+
+body {
+	font-family: 'Roboto';
+}
+
+header {
+	padding-top: 20px;
+	background-color: darken(#FF4200, 5%);
+	.navbar-collapse {
+		border: 0 none;
+		box-shadow: none;
+	}
+	.navbar-default {
+		.navbar-toggle {
+			border-color: transparent;
+			&:hover, &:focus, &:active {
+				background-color: transparent;
+			}
+			&:focus {
+				border-color: $nav-link-color;
+			}
+			.icon-bar {
+					background-color: $nav-link-color;
+			}
+		}
+	}
+	.navbar {
+		background-color: transparent;
+		border: 0 none;
+		.navbar-brand {
+			color: $nav-link-color;
+			font-weight: 500;
+			background-repeat: no-repeat;
+			background-image: url(../Images/logo.png);
+			background-size: 50px;
+			width: 50px;
+			height: 60px;
+			&:focus {
+				outline: 0 none;
+				color: $nav-link-color;
+				text-decoration: underline;
+			}
+			&:hover {
+				color: $nav-link-color;
+				text-decoration: underline;
+			}
+		}
+		.navbar-nav {
+			> li {
+				&.active {
+					> a {
+						background-color: transparent;
+						text-decoration: underline;
+						color: $nav-link-color;
+						&:hover {
+							background-color: transparent;
+							color: $nav-link-color;
+							text-decoration: underline;
+						}
+					}
+				}
+				> a {
+					padding-left: 0;
+					color: $nav-link-color;
+					background-color: transparent;
+					&:hover {
+						background-color: transparent;
+						color: $nav-link-color;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+.content {
+	padding: 20px 0;
+}
+
+footer {
+	color: $footer-color;
+	background-color: $footer-bg-color;
+	padding: 15px 0;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+	header {
+		.navbar {
+			.navbar-nav {
+				margin-left: 20px;
+				> li {
+					> a {
+						padding-left: 15px;
+					}
+				}
+			}
+		}
+	}
+}
